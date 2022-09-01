@@ -29,9 +29,8 @@ def log_listener_configurer():
 def log_listener_process(log_queue, log_configurer_func):
     """
     From https://docs.python.org/3/howto/logging-cookbook.html#logging-to-a-single-file-from-multiple-processes
-    :param log_queue:
-    :param log_configurer_func:
-    :return:
+    :param log_queue: the multiprocessing queue
+    :param log_configurer_func: the log_listener_configurer function (above)
     """
     log_configurer_func()
     while True:
@@ -50,8 +49,7 @@ def log_listener_process(log_queue, log_configurer_func):
 def worker_log_configurer(log_queue):
     """
     From https://docs.python.org/3/howto/logging-cookbook.html#logging-to-a-single-file-from-multiple-processes
-    :param log_queue:
-    :return:
+    :param log_queue: the log_queue
     """
     h = logging.handlers.QueueHandler(log_queue)  # Just the one handler needed
     root = logging.getLogger()
@@ -61,6 +59,13 @@ def worker_log_configurer(log_queue):
 
 
 def producer_func(processing_queue, log_queue, logging_configurer, consumer_count):
+    """
+    My Example producer function for testing
+    :param processing_queue: the queue object that the producer is goinng to add items to
+    :param log_queue:  the queue object for the logs
+    :param logging_configurer: the configuratin function for worker processes (worker_log_configurer)
+    :param consumer_count: how many consumer functions are going to be created - based on the arguments passed to main
+    """
     # Set up the logging for the producer
     logging_configurer(log_queue)
     logger = logging.getLogger(LOG_NAME)
@@ -80,6 +85,12 @@ def producer_func(processing_queue, log_queue, logging_configurer, consumer_coun
 
 
 def consumer_func(processing_queue, log_queue, logging_configurer):
+    """
+    My example consumer function
+    :param processing_queue: the queue object that the consumer(s) are working through
+    :param log_queue: queue object for the logs
+    :param logging_configurer: the configuratin function for worker processes (worker_log_configurer)
+    """
     # Set up logging for each consumer to all use the same log file
     logging_configurer(log_queue)
     logger = logging.getLogger(LOG_NAME)
