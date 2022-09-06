@@ -4,3 +4,5 @@
 .idea
 **.idea/**
 .vs/**
+**/__pycache__/**
+_pycache__/*

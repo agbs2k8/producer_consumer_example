@@ -1,42 +1,18 @@
-2022-08-24 13:45:28,863 MainProcess producer_consumer_example INFO     Created Log Queue: <queue.Queue object at 0x105230670>
-2022-08-24 13:45:28,863 MainProcess producer_consumer_example INFO     Created the Processor Queue: <queue.Queue object at 0x105230ac0>
-2022-08-24 13:45:28,863 MainProcess producer_consumer_example INFO     Starting the 2 consumer(s)
-2022-08-24 13:45:28,865 MainProcess producer_consumer_example INFO     Starting the producer
-2022-08-24 13:45:28,866 MainProcess producer_consumer_example INFO     Join Producer
-2022-08-24 13:45:28,898 Process-3  producer_consumer_example INFO     Consumer - Consumer Running
-2022-08-24 13:45:28,899 Process-3  producer_consumer_example INFO     Nothing to consume now, waiting...
-2022-08-24 13:45:28,900 Process-4  producer_consumer_example INFO     Consumer - Consumer Running
-2022-08-24 13:45:28,900 Process-4  producer_consumer_example INFO     Nothing to consume now, waiting...
-2022-08-24 13:45:28,900 Process-5  producer_consumer_example INFO     Producer Running
-2022-08-24 13:45:29,402 Process-3  producer_consumer_example INFO     Nothing to consume now, waiting...
-2022-08-24 13:45:29,631 Process-4  producer_consumer_example INFO     Consumed value 0
-2022-08-24 13:45:29,632 Process-4  producer_consumer_example INFO     Nothing to consume now, waiting...
-2022-08-24 13:45:30,862 Process-4  producer_consumer_example INFO     Consumed value 2
-2022-08-24 13:45:31,392 Process-4  producer_consumer_example INFO     Consumed value 3
-2022-08-24 13:45:31,938 Process-4  producer_consumer_example INFO     Consumed value 4
-2022-08-24 13:45:32,515 Process-3  producer_consumer_example INFO     Consumed value 1
-2022-08-24 13:45:32,970 Process-3  producer_consumer_example INFO     Consumed value 6
-2022-08-24 13:45:33,367 Process-4  producer_consumer_example INFO     Consumed value 5
-2022-08-24 13:45:34,829 Process-3  producer_consumer_example INFO     Consumed value 7
-2022-08-24 13:45:35,784 Process-4  producer_consumer_example INFO     Consumed value 8
-2022-08-24 13:45:36,650 Process-3  producer_consumer_example INFO     Consumed value 9
-2022-08-24 13:45:36,814 Process-4  producer_consumer_example INFO     Consumed value 10
-2022-08-24 13:45:37,822 Process-3  producer_consumer_example INFO     Consumed value 11
-2022-08-24 13:45:39,232 Process-3  producer_consumer_example INFO     Consumed value 13
-2022-08-24 13:45:39,268 Process-4  producer_consumer_example INFO     Consumed value 12
-2022-08-24 13:45:39,771 Process-4  producer_consumer_example INFO     Consumed value 15
-2022-08-24 13:45:40,507 Process-3  producer_consumer_example INFO     Consumed value 14
-2022-08-24 13:45:40,725 Process-4  producer_consumer_example INFO     Consumed value 16
-2022-08-24 13:45:41,795 Process-3  producer_consumer_example INFO     Consumed value 17
-2022-08-24 13:45:42,408 Process-3  producer_consumer_example INFO     Consumed value 19
-2022-08-24 13:45:43,267 Process-4  producer_consumer_example INFO     Consumed value 18
-2022-08-24 13:45:43,575 Process-4  producer_consumer_example INFO     Consumed value 21
-2022-08-24 13:45:44,890 Process-3  producer_consumer_example INFO     Consumed value 20
-2022-08-24 13:45:44,891 Process-5  producer_consumer_example INFO     Producer Done
-2022-08-24 13:45:44,906 MainProcess producer_consumer_example INFO     Join Consumers
-2022-08-24 13:45:45,249 Process-4  producer_consumer_example INFO     Consumed value 22
-2022-08-24 13:45:45,654 Process-4  producer_consumer_example INFO     Consumed value 24
-2022-08-24 13:45:45,654 Process-4  producer_consumer_example INFO     Consumer shut down.
-2022-08-24 13:45:46,782 Process-3  producer_consumer_example INFO     Consumed value 23
-2022-08-24 13:45:46,782 Process-3  producer_consumer_example INFO     Consumer shut down.
-2022-08-24 13:45:46,788 MainProcess producer_consumer_example INFO     Signal the end of the logging and join
+2022-09-05 14:40:43,575 MainProcess producer_consumer_example INFO     Created Log Queue: <queue.Queue object at 0x7fa27d5f5270> from pid 46594
+2022-09-05 14:40:43,578 MainProcess producer_consumer_example INFO     Created the Processor Queue: <queue.Queue object at 0x7fa27d5f56c0> from pid 46594
+2022-09-05 14:40:43,579 MainProcess producer_consumer_example INFO     Starting the 2 consumer(s)
+2022-09-05 14:40:43,590 MainProcess producer_consumer_example INFO     Starting the producer from pid 46594
+2022-09-05 14:40:43,598 MainProcess producer_consumer_example INFO     Join Producer from pid 46594
+2022-09-05 14:40:43,769 Process-4  producer_consumer_example INFO     Consumer - Consumer Running on pid 46599
+2022-09-05 14:40:43,769 Process-5  producer_consumer_example INFO     Producer Running on pid 46600
+2022-09-05 14:40:43,771 Process-4  producer_consumer_example INFO     Nothing to consume now, waiting... pid 46599
+2022-09-05 14:40:43,775 Process-3  producer_consumer_example INFO     Consumer - Consumer Running on pid 46598
+2022-09-05 14:40:43,776 Process-3  producer_consumer_example INFO     Nothing to consume now, waiting... pid 46598
+2022-09-05 14:40:45,074 Process-3  producer_consumer_example INFO     Consumed value 1 on pid 46598
+2022-09-05 14:40:45,075 Process-5  producer_consumer_example INFO     Producer KILLED on pid 46600 - restart from 6
+2022-09-05 14:40:45,077 Process-5  producer_consumer_example INFO     Producer Done on pid 46600
+2022-09-05 14:40:45,078 Process-3  producer_consumer_example INFO     Consumer shut down. on pid 46598
+2022-09-05 14:40:45,106 MainProcess producer_consumer_example INFO     Join Consumers from pid 46594
+2022-09-05 14:40:46,220 Process-4  producer_consumer_example INFO     Consumed value 0 on pid 46599
+2022-09-05 14:40:46,221 Process-4  producer_consumer_example INFO     Consumer shut down. on pid 46599
+2022-09-05 14:40:46,248 MainProcess producer_consumer_example INFO     Signal the end of the logging and join from pid 46594
